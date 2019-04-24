@@ -6,33 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-  $("#hide").click(function(){
-    $("p").hide();
+
+  $(document).ready(function() {
+  $('#meuFormulario').on('submit', function(e) {
+    e.preventDefault();
+    var len1 = $('#usuario').val();
+    var len2 = $('#senha').val();
+    if (len1 == 'Rogerio' && len2 == '123') {
+      localStorage.setItem("usuario", $('#usuario').val());
+      localStorage.setItem("senha", $('#senha').val());
+
+      this.submit();
+    } else {
+      alert("Acesso NEGADO!!!")
+    }
   });
-  $("#show").click(function(){
-    $("p").show();
-  });
+});
   </script>
-
 </head>
-
 <body>
-
-
-
   <header>
     <h2>MEU HOBBIE FAVORITO</h2>
   </header>
-
   <h2>Como comecei a fumar e fatos relevantes acerca do narguile:</h2>
 <p>Comecei a fumar direto, quando tinha cerca de 16 anos, porém já havia experimentado quando tinha 12/13 anos
 escondido dos meus pais, porém mão me aprofundei por conta da minha idade.</p>
 <p>Resize the browser window to see the responsive effect.</p>
 <p><strong>Note:</strong>Narguile é conhecido como o malfeitor da saúde pública, quando o assunto é tabagismo e saúde
 ficando até mesmo atrás do cigarro, que contém 4.720 substâncias tóxicas, sendo 70 cancerígenas, sendo que o narguile tem apenas uma substância, a nicotina.</p>
-
-
 <section>
   <nav>
     <b>clique a baixo, e saiba mais um pouco sobre.</b.
@@ -42,14 +43,24 @@ ficando até mesmo atrás do cigarro, que contém 4.720 substâncias tóxicas, s
       <li><a href="https://tempolivre.umcomo.com.br/artigo/como-preparar-um-narguile-8267.html">Como preparar um narguile?</a></li>
     </ul>
   </nav>
-
   <article>
-    <b><h1>Narguile, eu passatempo favorito.</h1></b>
+    <b><h1>Narguile, meu passatempo favorito.</h1></b>
     <p>Fumo diariamnete, como um passatempo pós trabalho, algo que tira o stress também(risos).</p>
     <p>É conhecido popularmente pela cultura Árabe, da qual faço parte, e logo me acostumei com tal.S</p>
   </article>
 </section>
+<h1 class="w3-center">Acesso de usuário</h1>
+  <form id="meuFormulario" action="pagina2.html">
+Usuario:<br>
+<input type="text" name="usuario" value="" id="usuario">
+<br>
+Senha:<br>
+<input type="password" name="senha" value="" id="senha">
+<br><br>
 
+
+<input type="submit" value="Enviar">
+</form>
 <footer>
   <p>Imagens relacionadas:</p>
   <img src=https://i.pinimg.com/originals/fb/86/16/fb86166746cd6b08463029964d540f10.jpg alt="Trulli" width="100" height="75">
@@ -64,3 +75,4 @@ ficando até mesmo atrás do cigarro, que contém 4.720 substâncias tóxicas, s
   <img src="https://tse1.mm.bing.net/th?id=OIP.PhXhsszqZAmZM2HEcUm_wwHaEK&pid=15.1&P=0&w=292&h=165" alt="" width= "100" height="75">
   <img src="https://tse3.mm.bing.net/th?id=OIP.Lya8EwCOXiovNFPfLcmufQAAAA&pid=15.1&P=0&w=300&h=300" alt="" width= "100" height="75">
   <img src="https://tse4.mm.bing.net/th?id=OIP.Zg9AbkxJkKrAGl2bznBYpQHaEK&pid=15.1&P=0&w=302&h=171" alt="" width= "100" height="75">
+  <script src="js/comportamento.js"></script>
