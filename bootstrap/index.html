@@ -1,4 +1,111 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Narguile, meu hobbie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+  <script>
+
+   $(document).ready(function() {
+
+
+
+     $('#form1').on('submit', function(e) {
+
+       e.preventDefault();
+
+
+
+       var api_url = 'https://api.linkpreview.net'
+
+       var key = '5ccf84adde6df2e3bf5a040cf0632c49e317f22558f16' // real
+
+       $.ajax({
+
+         url: api_url + "?key=" + key + "&q=" + $("#endereco").val(),
+
+         contentType: "application/json",
+
+         dataType: 'json',
+
+         success: function(result) {
+
+           $("#p1").text(result.title);
+
+           $("#p2").text(result.description);
+
+           $('#p3').attr('src', result.image);
+
+           $("#p4").text(result.url);
+
+         }
+
+       });
+
+
+
+     });
+
+
+
+   });
+
+  </script>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+  <style>
+    .map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h2>MEU HOBBIE FAVORITO</h2>
+
+  </header>
+
+  <h2>Como comecei a fumar e fatos relevantes acerca do narguile:</h2>
+
+<p>Comecei a fumar direto, quando tinha cerca de 16 anos, porém já havia experimentado quando tinha 12/13 anos
+
+escondido dos meus pais, porém mão me aprofundei por conta da minha idade.</p>
+
+<p><strong>Note:</strong>Narguile é conhecido como o malfeitor da saúde pública, quando o assunto é tabagismo e saúde
+
+ficando até mesmo atrás do cigarro, que contém 4.720 substâncias tóxicas, sendo 70 cancerígenas, sendo que o narguile tem apenas uma substância, a nicotina.</p>
+
+<section>
+
+  <nav>
+
+    <b>clique a baixo, e saiba mais um pouco sobre.</b.
+
+    <ul>
+
+      <li><a href="https://www.multarte.com.br/tudo-sobre-narguiles-essencias-precos-e-historia/">Essências, preços e história.</a></li>
+
+      <li><a href="https://blogdonarguile.com/2015/01/16/narguile-para-iniciantes-com-qual-narguile-devo-comecar/">Como e com o que começar?</a></li>
+
+      <li><a href="https://tempolivre.umcomo.com.br/artigo/como-preparar-um-narguile-8267.html">Como preparar um narguile?</a></li>
+
+    </ul>
+
+  </nav>
+
+  <article>
+
+
 <html>
 <head>
   <link type="text/css" rel="stylesheet"
@@ -72,27 +179,11 @@ $(document).ready(function() {
   </script>
 </head>
 <body>
-  <header>
-    <h2>MEU HOBBIE FAVORITO</h2>
-  </header>
-  <h2>Como comecei a fumar e fatos relevantes acerca do narguile:</h2>
-<p>Comecei a fumar direto, quando tinha cerca de 16 anos, porém já havia experimentado quando tinha 12/13 anos
-escondido dos meus pais, porém mão me aprofundei por conta da minha idade.</p>
-<p><strong>Note:</strong>Narguile é conhecido como o malfeitor da saúde pública, quando o assunto é tabagismo e saúde
-ficando até mesmo atrás do cigarro, que contém 4.720 substâncias tóxicas, sendo 70 cancerígenas, sendo que o narguile tem apenas uma substância, a nicotina.</p>
-<section>
-  <nav>
-    <b>clique a baixo, e saiba mais um pouco sobre.</b.
-    <ul>
-      <li><a href="https://www.multarte.com.br/tudo-sobre-narguiles-essencias-precos-e-historia/">Essências, preços e história.</a></li>
-      <li><a href="https://blogdonarguile.com/2015/01/16/narguile-para-iniciantes-com-qual-narguile-devo-comecar/">Como e com o que começar?</a></li>
-      <li><a href="https://tempolivre.umcomo.com.br/artigo/como-preparar-um-narguile-8267.html">Como preparar um narguile?</a></li>
-    </ul>
-  </nav>
+
   <article>
     <b><h1>Narguile, meu passatempo favorito.</h1></b>
     <p>Fumo diariamnete, como um passatempo pós trabalho, algo que tira o stress também(risos).</p>
-    <p>É conhecido popularmente pela cultura Árabe, da qual faço parte, e logo me acostumei com tal.S</p>
+    <p>É conhecido popularmente pela cultura Árabe, da qual faço parte, e logo me acostumei com tal.</p>
   </article>
 </section>
 
@@ -191,3 +282,119 @@ ficando até mesmo atrás do cigarro, que contém 4.720 substâncias tóxicas, s
   <img src="https://tse3.mm.bing.net/th?id=OIP.Lya8EwCOXiovNFPfLcmufQAAAA&pid=15.1&P=0&w=300&h=300" alt="" width= "100" height="75">
   <img src="https://tse4.mm.bing.net/th?id=OIP.Zg9AbkxJkKrAGl2bznBYpQHaEK&pid=15.1&P=0&w=302&h=171" alt="" width= "100" height="75">
   <script src="js/comportamento.js"></script>
+
+
+
+  <script>
+$(document).ready(function() {
+
+
+
+
+
+      var minhaview = new ol.View({
+
+        center: ol.proj.fromLonLat([-46.736804, -23.5247576]),
+
+        zoom: 16
+
+      });
+
+
+
+      var map = new ol.Map({
+
+        target: 'map',
+
+        layers: [
+
+          new ol.layer.Tile({
+
+            source: new ol.source.OSM()
+
+          })
+
+        ],
+
+        view: minhaview
+
+      });
+
+
+
+      $("#bt1").click(function() {
+
+        minhaview.animate({
+
+          center: ol.proj.fromLonLat([-46.5976273, -23.5519444]),
+
+          duration: 6000
+
+        });
+
+      });
+
+
+
+      $("#bt2").click(function() {
+
+        getLocation();
+
+      });
+
+
+
+      function getLocation() {
+
+        if (navigator.geolocation) {
+
+          navigator.geolocation.getCurrentPosition(showPosition);
+
+        } else {
+
+          alert("Geolocation is not supported by this browser.");
+
+        }
+
+      }
+
+
+
+      function showPosition(position) {
+
+        minhaview.animate({
+
+          center: ol.proj.fromLonLat([position.coords.longitude, position.coords.latitude]),
+
+          duration: 6000
+
+        });
+
+      }
+
+
+
+
+
+    });
+
+
+
+    </script>
+<div id="map" class="map"></div>
+
+    <br><br>
+
+    <button type="button" id="bt1">Lozalizar São judas: Mooca</button>
+
+
+
+    <br><br>
+
+
+
+    <button type="button" id="bt2">Achar minhas cordenadas geograficas</button>
+</body>
+
+
+</html>
